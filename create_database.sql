@@ -8,7 +8,7 @@ CREATE TABLE runners (
 CREATE TABLE users (
 	id			SESRIAL	PRIMARY KEY,
 	userid		varchar(30),
-	
+	username	TEXT	
 )
 
 CREATE TABLE contests (
