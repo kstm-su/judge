@@ -1,0 +1,72 @@
+body {
+	width: 100%;
+	margin: 0px;
+}
+
+.english {
+	display: none;
+}
+
+.quicksand {
+	font-family: 'Quicksand', sans-serif;
+}
+
+header {
+	/*position: fixed;
+	top: 0px;
+	left: 0px;*/
+	width: 100%;
+	background: #494949;
+    box-shadow: 0px 1px 60px inset;
+}
+
+header h1 {
+	
+	display:inline-block;
+}
+
+h1 {
+	font-size: 20px;
+	padding: 20px 0px;
+	margin: 0px;
+	color: #FFF;
+	display: inline-block;
+}
+
+h2 {
+	margin: 0px;
+}
+
+main {
+	width: 800px;
+	margin: auto 0px;
+}
+
+footer {
+	
+}
+
+.centering {
+	width: 800px;
+	margin: 0px auto;
+}
+
+.block {
+	padding: 10px 0px;
+	clear:both;
+}
+
+.block .head {
+	box-sizing: border-box;
+	float: left;
+	padding: 5px;
+	width: 200px;
+}
+
+.block .main {
+	box-sizing: border-box;
+	border-left:1px solid #ccc;
+	float:right;
+	padding: 10px;
+	width: 600px;
+}
