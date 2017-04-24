@@ -27,7 +27,7 @@
 				<p class="english">Statement</p>
 			</div>
 			<div class="main">
-				<p>整数値AとBが与えられる。AとBを足した結果を標準出力せよ。</p>
+				<p>{{.statement}}</p>
 			</div>
 		</div>
 		<div class="block">
@@ -35,44 +35,21 @@
 				<p class="japanese">制約</p>
 				<p class="english">Limits</p>
 			</div>
-			<div class="main">
-				<p>0 <= A <= 1000</p>
-				<p>0 <= B <= 1000</p>
-			</div>
+			<ul class="main">
+				<li>0 <= A <= 1000</li>
+				<li>0 <= B <= 1000</li>
+			</ul>
 		</div>
+		{{range .testcase}}
 		<div class="block">
 			<div class="head">
-				<p class="quicksand">Test Case #1 Input</p>
+				<p class="quicksand">Test Case {{.Id}}</p>
 			</div>
 			<div class="main">
-				<p>3 5</p>
+				<p>{{.Name}}</p>
 			</div>
 		</div>
-		<div class="block">
-			<div class="head">
-				<p class="quicksand">Test Case #1 Output</p>
-			</div>
-			<div class="main">
-				<p>8</p>
-			</div>
-		</div>
-		<div class="block">
-			<div class="head">
-				<p class="quicksand">Test Case #2 Input</p>
-			</div>
-			<div class="main">
-				<p>1000 1000</p>
-			</div>
-		</div>
-		<div class="block">
-			<div class="head">
-				<p class="quicksand">Test Case #2 Output</p>
-			</div>
-			<div class="main">
-				<p>2000</p>
-			</div>
-		</div>
-
+		{{end}}
 	</main>
 	<footer>
 		
