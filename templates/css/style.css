@@ -11,6 +11,10 @@ body {
 	font-family: 'Quicksand', sans-serif;
 }
 
+li {
+	display: block;
+}
+
 header {
 	/*position: fixed;
 	top: 0px;
