@@ -4,6 +4,7 @@
 	<title>kstm Judge</title>
 	<link href="https://fonts.googleapis.com/css?family=Quicksand:300" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
+	<script type="text/javascript" async src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </head>
 <body>
 	<header>
@@ -36,8 +37,9 @@
 				<p class="english">Limits</p>
 			</div>
 			<ul class="main">
-				<li>0 <= A <= 1000</li>
-				<li>0 <= B <= 1000</li>
+				{{range .limit}}
+				<li>{{.}}</li>
+				{{end}}
 			</ul>
 		</div>
 		{{range .testcase}}
