@@ -15,6 +15,16 @@ li {
 	display: block;
 }
 
+.title-menu {
+	float: right;
+}
+.title-menu li {
+    float: left;
+    font-size: 17px;
+    color: #e1e1e1;
+    padding: 0px 20px;
+}
+
 header {
 	/*position: fixed;
 	top: 0px;
