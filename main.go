@@ -12,8 +12,14 @@ type C struct {
 
 func main() {
 	router := gin.Default()
-	router.LoadHTMLGlob("templates/*.tmpl")
+	//router.Static("/css", "./templates/css")
 	router.Static("/css", "./templates/css")
+	router.LoadHTMLGlob("templates/*.tmpl")
+	//router.HTMLRender = createMyRender()
+	router.GET("/", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "index.tmpl", gin.H{})
+	})
+
 	router.GET("/problem", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "problem.tmpl", gin.H{
 			"statement": "Calculate Sum of \\(A + B\\)",

@@ -1,66 +1,49 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>kstm Judge</title>
-		<link href="https://fonts.googleapis.com/css?family=Quicksand:300" rel="stylesheet">
-		<link rel="stylesheet" href="css/style.css">
-		<script type="text/javascript" async src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-	</head>
+	{{ template "head.tmpl" }}
 	<body>
-	<header>
-		<div class="centering">
-			<h1 class="quicksand header-box">kstm Judge</h1>
-			<ol class="title-menu">
-				<li>Top</li>
-				<li>Problem</li>
-				<li>Status</li>
-				<li>API</li>
-			</ol>
-		</div>
-	</header>
-	<main class="centering">
-		<div class="block">
-			<div class="head">
-				<p class="japanese">問題</p>
-				<p class="english">Problem</p>
+		{{ template "header.tmpl" }}
+		<main class="centering">
+			<div class="block">
+				<div class="head">
+					<p class="japanese">問題</p>
+					<p class="english">Problem</p>
+				</div>
+				<div class="main">
+					<h2>A+B Problem</h2>
+				</div>
 			</div>
-			<div class="main">
-				<h2>A+B Problem</h2>
+			<div class="block">
+				<div class="head">
+					<p class="japanese">問題文</p>
+					<p class="english">Statement</p>
+				</div>
+				<div class="main">
+					<p>{{.statement}}</p>
+				</div>
 			</div>
-		</div>
-		<div class="block">
-			<div class="head">
-				<p class="japanese">問題文</p>
-				<p class="english">Statement</p>
+			<div class="block">
+				<div class="head">
+					<p class="japanese">制約</p>
+					<p class="english">Limits</p>
+				</div>
+				<ul class="main">
+					{{range .limit}}
+					<li>{{.}}</li>
+					{{end}}
+				</ul>
 			</div>
-			<div class="main">
-				<p>{{.statement}}</p>
+			{{range .testcase}}
+			<div class="block">
+				<div class="head">
+					<p class="quicksand">Test Case {{.Id}}</p>
+				</div>
+				<div class="main">
+					<p>{{.Name}}</p>
+				</div>
 			</div>
-		</div>
-		<div class="block">
-			<div class="head">
-				<p class="japanese">制約</p>
-				<p class="english">Limits</p>
-			</div>
-			<ul class="main">
-				{{range .limit}}
-				<li>{{.}}</li>
-				{{end}}
-			</ul>
-		</div>
-		{{range .testcase}}
-		<div class="block">
-			<div class="head">
-				<p class="quicksand">Test Case {{.Id}}</p>
-			</div>
-			<div class="main">
-				<p>{{.Name}}</p>
-			</div>
-		</div>
-		{{end}}
-	</main>
-	<footer>
-		
-	</footer>
-</body>
+			{{end}}
+		</main>
+		{{ template "footer.tmpl" }}
+	</body>
 </html>
