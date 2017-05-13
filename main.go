@@ -27,5 +27,23 @@ func main() {
 			"testcase":  []C{{"In #1", "3 5"}, {"Out #1", "8"}},
 		})
 	})
+
+	router.GET("/submission", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "submission.tmpl", gin.H{
+
+		})
+	})
+
+	router.GET("/status", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "status.tmpl", gin.H{
+
+		})
+	})
+
+	router.GET("/api", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "api.tmpl", gin.H{
+
+		})
+	})
 	router.Run(":8080")
 }
