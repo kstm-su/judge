@@ -20,7 +20,11 @@ func main() {
 		c.HTML(http.StatusOK, "index.tmpl", gin.H{})
 	})
 
-	router.GET("/problem", func(c *gin.Context) {
+	roter.GET("/problems", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "problems.tmpl", gin.H{})
+	})
+
+	router.GET("/problem/:id", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "problem.tmpl", gin.H{
 			"statement": "Calculate Sum of \\(A + B\\)",
 			"limit": []string{"\\(0 \\leq A \\leq 1000, A \\in \\Z \\)","\\(0 \\leq B \\leq 1000, A \\in \\Z \\)"},
