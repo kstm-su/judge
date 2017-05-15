@@ -40,7 +40,7 @@ func main() {
 		})
 	})
 
-	router.GET("/api", func(c *gin.Context) {
+	router.GET("/api/", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "api.tmpl", gin.H{
 
 		})
