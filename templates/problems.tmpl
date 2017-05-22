@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	{{ template "head.tmpl" }}
+	<body>
+		{{ template "header.tmpl" }}
+		<main class="centering">
+			<div class="block">
+				<div class="head">
+					<p class="japanese">No.1</p>
+				</div>
+				<div class="main">
+					<a href="/problem/1">A + B Problem</a>
+				</div>
+			</div>
+			<div class="block">
+				<div class="head">
+					<p class="japanese">問題文</p>
+					<p class="english">Statement</p>
+				</div>
+				<div class="main">
+					<p>{{.statement}}</p>
+				</div>
+			</div>
+			<div class="block">
+				<div class="head">
+					<p class="japanese">制約</p>
+					<p class="english">Limits</p>
+				</div>
+				<ul class="main">
+					{{range .limit}}
+					<li>{{.}}</li>
+					{{end}}
+				</ul>
+			</div>
+			{{range .testcase}}
+			<div class="block">
+				<div class="head">
+					<p class="quicksand">Test Case {{.Id}}</p>
+				</div>
+				<div class="main">
+					<p>{{.Name}}</p>
+				</div>
+			</div>
+			{{end}}
+		</main>
+		{{ template "footer.tmpl" }}
+	</body>
+</html>
