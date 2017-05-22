@@ -17,10 +17,12 @@ li {
 
 .title-menu {
 	float: right;
+	margin: 0px;
+	padding: 22px 0px;
 }
 .title-menu li {
     float: left;
-    font-size: 17px;
+    font-size: 16px;
     color: #e1e1e1;
     padding: 0px 20px;
 }
