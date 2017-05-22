@@ -20,7 +20,7 @@ func main() {
 		c.HTML(http.StatusOK, "index.tmpl", gin.H{})
 	})
 
-	roter.GET("/problems", func(c *gin.Context) {
+	router.GET("/problems", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "problems.tmpl", gin.H{})
 	})
 
