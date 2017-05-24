@@ -14,6 +14,7 @@ func main() {
 	router := gin.Default()
 	//router.Static("/css", "./templates/css")
 	router.Static("/css", "./templates/css")
+	router.Static("/js", "./templates/js")
 	router.LoadHTMLGlob("templates/*.tmpl")
 	//router.HTMLRender = createMyRender()
 	router.GET("/", func(c *gin.Context) {

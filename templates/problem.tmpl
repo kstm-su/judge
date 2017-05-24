@@ -43,6 +43,30 @@
 				</div>
 			</div>
 			{{end}}
+			<div class="block">
+				<h3>提出</h3>
+				<div id="code" style="height:200px;"></div>
+				<button>Run</button>
+				<button>Submit</button>
+				<select name="language">
+				</select>
+				<script>
+					for(var i in languages){
+						var option = document.createElement('option');
+						option.textContent = i;
+						document.querySelector('select[name=language]').appendChild(option);
+					}
+					var editor = ace.edit("code");
+					editor.setTheme("ace/theme/monokai");
+					document.addEventListener('DOMContentLoaded',function() {
+					    document.querySelector('select[name="language"]').onchange=changeLanguage;
+					},false);
+					function changeLanguage(event){
+						editor.getSession().setMode(languages[event.target.value].mode);
+					}
+				</script>
+
+			</div>
 		</main>
 		{{ template "footer.tmpl" }}
 	</body>
